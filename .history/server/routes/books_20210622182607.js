@@ -12,6 +12,19 @@ let mongoose = require('mongoose');
 // define the book model
 let Book = require('../models/books');
 
+//Display details page
+router.get('/details', (req, res, next) => {
+  Book.find( (err, books) => {
+    if (err) {
+      return console.error(err);
+    }
+    else {
+      res.render('books/details', {title: 'Books Details', Books: books});
+    }
+    //To organize in alphabetical order
+  }).sort({title: 1, author: 1});;
+});
+
 /* GET books List page. READ */
 router.get('/', (req, res, next) => {
   // find all books in the books collection

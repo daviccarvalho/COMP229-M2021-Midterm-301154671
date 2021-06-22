@@ -27,12 +27,12 @@ router.get('/', (req, res, next) => {
 });
 
 //  GET the Book Details page in order to add a new Book
-router.get('/details', (req, res, next) => {
-    res.render('books/details', {title: 'Add Book'});
+router.get('/add', (req, res, next) => {
+    res.render('books/add', {title: 'Add Book'});
 });
 
 // POST process the Book Details page and create a new Book - CREATE
-router.post('/details', (req, res, next) => {
+router.post('/add', (req, res, next) => {
 
   let newBook = Book({
     "title": req.body.title,
@@ -86,9 +86,7 @@ router.post('/edit/:id', (req, res, next) => {
       "_id": id,
       "title": req.body.title,
       "author": req.body.author,
-      "published": req.body.published,
-      "description": req.body.description,
-      "price": req.body.price,
+      "published": req.body.published,"description": req.body.description,"price": req.body.price,
       "genre": req.body.genre
   });
 
@@ -125,5 +123,6 @@ router.get('/delete/:id', (req, res, next) => {
       }
   });
 });
+
 
 module.exports = router;

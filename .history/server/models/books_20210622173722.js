@@ -6,13 +6,15 @@ June 22, 2021
 */
 let mongoose = require('mongoose');
 
-//Create a Book model class - Full book fields
-let Book = mongoose.Schema({title:String,
-  author:String,
-  published:Number,
-  description:String,
-  price:Number,
-  genre:String},
+//Create a model class - Full book fields
+let Book = mongoose.Schema({
+    title: String,
+    author: String,
+    published: Number,
+    description: String,
+    price: Number,    
+    genre: String
+},
 {
   collection: "books"
 });

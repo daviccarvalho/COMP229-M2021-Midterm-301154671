@@ -5,6 +5,6 @@ Student id# 301154671
 June 22, 2021
 */
 module.exports = {
-  //MongoDB deployment from Mongo Atlas ->
+  //MongoDB deployment ->
   "URI": "mongodb+srv://davi:ZD9wg5HZk6wDnf1x@mongodbserver.wcewf.mongodb.net/book_store?retryWrites=true&w=majority"
 };
